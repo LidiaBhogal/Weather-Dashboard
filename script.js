@@ -1,31 +1,37 @@
 var today = moment();
   $(".date").text(today.format('L'));
 
-  let root = 'https://api.openweathermap.org/data/2.5/weather?q='
+  let root = 'https://api.openweathermap.org/data/2.5/forecast?q='
 
   let searchB = document.getElementById('search-button');
   let cityName = document.getElementById("search-input");
-  let apiKey = "3M1VZ9NYFdkpcjDQgxUoGBwE0x7FILRI"
-  let wholeUrl = root+cityName+ "&limit=5&appid=" + apiKey;
+  let apiKey = "699f44b239ac2b4ed6242e958b370589"
+  let wholeUrl = root+ 'london' + '&' + apiKey;
 
   $('#search-button').on('click', function(event){
       event.preventDefault();
       console.log(cityName.value);
-     searchB = ('search-button').val().trim();
+     cityName.val().trim();
      $("#search-button").val('')
     
   
   
   })
-  $.ajax({
-    url: wholeUrl,
-    method: "GET"
-  }).then(function(response) {
-    let cityOption = document.getElementById("form-input weather-search")
-    let forcast = response.forcast;
-    let cityOptionanswer = $("<p>").text(forcast)
-    cityOption.append(cityOptionanswer)
-   })
+  console.log(cityName);
+
+fetch(wholeUrl).then(response => response.json()).then(data => console.log(data));
+
+
+  // $.ajax({
+  //   url: wholeUrl,
+  //   method: "GET"
+  // }).then(function(response) {
+  //   let cityOption = document.getElementById("form-input weather-search")
+  //   let forcast = response.forcast;
+  //   let cityOptionanswer = $("<p>").text(forcast)
+  //   cityOption.append(cityOptionanswer)
+  //   console.log(forcast);
+  //  })
 
 
 
