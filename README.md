@@ -42,7 +42,7 @@ N/A
 
 In this task I used variables, jQuery, javascript, moment and bootstrap. Below is an image the page once you inspect/console.
 
-<img width="2240" alt="Screenshot 2023-01-31 at 19 11 16" src="https://user-images.githubusercontent.com/116956128/215859445-8c33087d-5305-4dda-91be-22a8e39d8c50.png">
+<img width="2240" alt="Screenshot 2023-01-31 at 21 37 29" src="https://user-images.githubusercontent.com/116956128/215889783-fd23a733-3c7b-4e5f-9da5-a31517548622.png">
 
 
 
