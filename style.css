@@ -1,0 +1,25 @@
+hr {
+    border: 1px lightgray solid;
+    width: 320px;
+ }
+
+
+
+ .container-border {
+    border: 3px black solid;
+ }
+
+
+.heading {
+    display: block;
+
+}
+
+.day-forecast {
+    display: inline-block;
+    width: 180px;
+    height: 200px;
+    background-color: blue;
+    margin: 15px;
+  
+}

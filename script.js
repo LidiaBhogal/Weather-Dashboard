@@ -1,4 +1,4 @@
-var today = moment();
+var todaysDate = moment();
   $(".date").text(today.format('L'));
 
   let root = 'https://api.openweathermap.org/data/2.5/forecast?q='
@@ -21,7 +21,7 @@ var today = moment();
 
 fetch(wholeUrl).then(response => response.json()).then(data => console.log(data));
 
-var todaysDate = moment().format("L");
+
 localStorage.setItem("selectedCity", cityName);
 $("#selected-city-heading").text(cityName + " " + "(" + todaysDate + ")");
 
