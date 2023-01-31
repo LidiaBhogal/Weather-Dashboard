@@ -11,7 +11,7 @@ var today = moment();
   $('#search-button').on('click', function(event){
       event.preventDefault();
       console.log(cityName.value);
-     cityName.val().trim();
+     
      $("#search-button").val('')
     
   
@@ -20,6 +20,27 @@ var today = moment();
   console.log(cityName);
 
 fetch(wholeUrl).then(response => response.json()).then(data => console.log(data));
+
+var todaysDate = moment().format("L");
+localStorage.setItem("selectedCity", cityName);
+$("#selected-city-heading").text(cityName + " " + "(" + todaysDate + ")");
+
+
+
+var todaysTemp = (Math.floor((response.list[0].main.temp) -273.15));
+localStorage.setItem("todaysTemp", todaysTemp);
+$("#selected-city-temp").text("Temp: " + todaysTemp + "°C");
+
+
+var todaysWind = response.list[0].wind.speed;
+localStorage.setItem("todaysWind", todaysWind);
+$("#selected-city-wind").text("Wind: " + todaysWind + " KPH");
+
+
+
+var todaysHumidity = response.list[0].main.humidity;
+localStorage.setItem("todaysHumidity", todaysHumidity);
+$("#selected-city-humidity").text(" Humidity: " + todaysHumidity + " %");
 
 
   // $.ajax({
