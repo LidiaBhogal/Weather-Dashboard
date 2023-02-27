@@ -35,7 +35,7 @@ $('#search-form').on('submit', function (event) {
       cityTemp.textContent = currentWeather.main.temp
       cityWind.textContent = currentWeather.wind.speed
       cityHumidity.textContent = currentWeather.main.humidity
-      weatherIcon.textContent = currentWeather.weather.icon
+      // weatherIcon.children[1].setAttribute('src',`https://openweathermap.org/img/wn/${response.list.weather[0].icon}@2x.png`)
     })
     .catch(err => console.error(err));
 
@@ -50,8 +50,8 @@ $('#search-form').on('submit', function (event) {
       // console.log("LINE 50", response)
       for (let i = 0; i < 6; i++) {
         console.log(response.list[i * 8])
-        console.log(dayWeather[i].children)
-        dayWeather[i].children[1].textContent = response.list[i * 8].main.temp + " C"
+        // console.log(dayWeather[i].children)
+        dayWeather[i].children[1].textContent = response.list[i * 8].main.temp + " C "
         dayWeather[i].children[2].textContent = response.list[i * 8].wind.speed
         dayWeather[i].children[3].textContent = response.list[i * 8].main.humidity
         dayWeather[i].children[0].setAttribute('src',`https://openweathermap.org/img/wn/${response.list[i*8].weather[0].icon}@2x.png`)

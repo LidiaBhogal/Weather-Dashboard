@@ -6,7 +6,8 @@ hr {
 
 
  .container-border {
-    border: 3px black solid;
+    
+    background-color: lightblue;
  }
 
 
@@ -21,5 +22,24 @@ hr {
     height: 200px;
     background-color: blue;
     margin: 15px;
+   
   
+}
+
+.card-body{
+    height: 305px;
+    background-color: white;
+    border: 3px black solid;
+    
+}
+
+#today{
+    border: 3px black solid;
+    background-color: white;
+}
+.card-header{
+    color: white;
+}
+#forcast{
+    height: 300px;
 }
